@@ -7,8 +7,8 @@ void setup() {
 }
 
 void loop() {
-  val = analogRead(analogPin); // retourne une valeur entre 0 et 1024 (représentant la plage 0 à 5V)
-  voltage = val / 73.07; // car 1024/14 = 73.07 (on repasse sur une plage de 0 à 14V)
+  val = analogRead(analogPin); // retourne une valeur entre 0 et 1023 (représentant la plage 0 à 5V)
+  voltage = val / 73.07; // car 1023/14 = 73.07 (on repasse sur une plage de 0 à 14V)
   String voltageHeader = "Tension : ";
   Serial.println(voltageHeader + voltage + " V");
   delay(500);
