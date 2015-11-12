@@ -25,8 +25,8 @@ void setup() {
   // pour les autres pins
   pinMode(buzzerPin, OUTPUT);
   pinMode(powerLedPin, OUTPUT);
-  pinMode(button1Pin, INPUT);
-  pinMode(button2Pin, INPUT);
+  pinMode(button1Pin, INPUT_PULLUP);
+  pinMode(button2Pin, INPUT_PULLUP);
 
   AllLedsOn();
   delay(500);
@@ -45,14 +45,14 @@ void loop() {
   button2State = digitalRead(button2Pin);
 
   // si bouton 1 ON, on joue une anim sur le bargraphe
-  if (button1State == HIGH)
+  if (button1State == LOW)
   {
     animBargraph();
   }
   else
   {
     // si bouton 2 ON, ou joue le french cancan avec le buzzer
-    if (button2State == HIGH)
+    if (button2State == LOW)
     {
       playFrenchCanCan();
     }
