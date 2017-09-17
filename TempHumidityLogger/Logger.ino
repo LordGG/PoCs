@@ -74,8 +74,8 @@ void loop() {
 
   if (button1IntervalState == HIGH && button1Interva2State == HIGH)
   {
-    intervalleMesures = 1000;
-    intervalleMesuresTxt = "1s";
+    intervalleMesures = 60000;
+    intervalleMesuresTxt = "1m";
   }
   else if (button1IntervalState == HIGH && button1Interva2State == LOW)
   {
